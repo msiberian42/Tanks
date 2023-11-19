@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Assertions;
+using NaughtyAttributes;
 
 namespace Player
 {
@@ -11,13 +13,19 @@ namespace Player
         {
 
         }
-        public void RotateTurret()
+        public void RotateTurret(Vector3 target)
         {
-
+            Debug.Log(target);
+            turret.transform.LookAt(new Vector3(target.x, turret.transform.position.y, target.z));
         }
         public void Shoot()
         {
 
+        }
+        [Button]
+        private void TestDebug()
+        {
+            Assert.IsNotNull(turret);
         }
     }
 }
