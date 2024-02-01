@@ -1,7 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Саммарии
+/// </summary>
 public class CameraFacer : MonoBehaviour
 {
     private Transform target;
